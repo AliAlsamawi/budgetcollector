@@ -26,12 +26,11 @@
           >
         </div>
         <h2 class="card-title">{{ month.name }}</h2>
-        {% if month.age > 0 %}
-          <p>A {{ month.age }} year old {{ month.breed }}</p>
+        {% if month.name > 0 %}
         {% else %}
-          <p>A {{ month.breed }} kitten.</p>
+          <p>The budget for  {{ month.name }} is {{ month.budget }}</p>
+          <p>The a year is {{ month.year }} .</p>
         {% endif %}
-        <p><small>{{ month.description }}</small></p>
       </div>
     </div>
   {% endfor %}
