@@ -9,10 +9,10 @@
 
 <section class="page-header">
   <h1>Month List</h1>
-  <img src="{% static 'images/cool-cat.svg' %}" alt="A cool cat" />
-  <img src="{% static 'images/happy-cat.svg' %}" alt="A happy cat" />
-  <img src="{% static 'images/teacup-cat.svg' %}" alt="A cat in a teacup" />
-  <img src="{% static 'images/cat-in-box.svg' %}" alt="A cat in a box" />
+  <img src="{% static 'images/banknotes.png' %}" alt="A cool cat" />
+  <img src="{% static 'images/bitcoin.png' %}" alt="A happy cat" />
+  <img src="{% static 'images/red-bag.png' %}" alt="A cat in a teacup" />
+  <img src="{% static 'images/us-dollar.png' %}" alt="A cat in a box" />
 </section>
 
 <section class="card-container">
@@ -21,7 +21,7 @@
       <div class="card-content">
         <div class="card-img-container">
           <img 
-            src="{% static 'images/sk8r-boi-cat.svg' %}" 
+            src="{% static 'images/money-world.png' %}" 
             alt="A skater boy cat"
           >
         </div>
@@ -29,7 +29,7 @@
         {% if month.name > 0 %}
         {% else %}
           <p>The budget for  {{ month.name }} is {{ month.budget }}</p>
-          <p>The a year is {{ month.year }} .</p>
+          <p>The a year {{ month.year }} .</p>
         {% endif %}
       </div>
     </div>

@@ -25,3 +25,6 @@ months = [
 ]
 def months_index(request):
   return render(request, 'months/index.html', { 'months': months })
+
+def home(request):
+  return render(request, 'home.html')
