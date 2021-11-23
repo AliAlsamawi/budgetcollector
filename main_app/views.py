@@ -1,6 +1,6 @@
 from django.shortcuts import render
+from .models import Month
 
-# Add the following import
 from django.http import HttpResponse
 
 # Define the home view
@@ -24,6 +24,7 @@ months = [
   Months('Dec', 1000, 2021),
 ]
 def months_index(request):
+  months = Month.objects.all()
   return render(request, 'months/index.html', { 'months': months })
 
 def home(request):

@@ -17,7 +17,8 @@
 
 <section class="card-container">
   {% for month in months %}
-    <div class="card">
+  <div class="card">
+    <a href="/months/{{ month.id }}">
       <div class="card-content">
         <div class="card-img-container">
           <img 
@@ -31,6 +32,7 @@
           <p>The budget for  {{ month.name }} is {{ month.budget }}</p>
           <p>The a year {{ month.year }} .</p>
         {% endif %}
+      </a>
       </div>
     </div>
   {% endfor %}
