@@ -10,15 +10,16 @@ def home(request):
 def about(request):
   return render(request, 'about.html')
 
-class months:  # Note that parens are optional if not inheriting from another class
-  def __init__(self, name, budget):
+class Months:  # Note that parens are optional if not inheriting from another class
+  def __init__(self, name, budget, year):
     self.name = name
-    self.breed = breed
-    self.description = description
-    self.age = age
+    self.budget = budget
+    self.year = year
+
+
 months = [
-  months('Lolo', 'tabby', 'Kinda rude.', 3),
-  months('Sachi', 'tortoiseshell', 'Looks like a turtle.', 0),
-  months('Fancy', 'bombay', 'Happy fluff ball.', 4),
-  months('Bonk', 'selkirk rex', 'Meows loudly.', 6)
+  Months('March', 1000, 2021),
+  Months('March', 1000, 2021),
+  Months('March', 1000, 2021),
+  Months('March', 1000, 2021),
 ]
