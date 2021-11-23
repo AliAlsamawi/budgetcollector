@@ -19,7 +19,9 @@ class Months:  # Note that parens are optional if not inheriting from another cl
 
 months = [
   Months('March', 1000, 2021),
-  Months('March', 1000, 2021),
-  Months('March', 1000, 2021),
-  Months('March', 1000, 2021),
+  Months('apirl', 1000, 2021),
+  Months('Feb', 1000, 2021),
+  Months('Dec', 1000, 2021),
 ]
+def months_index(request):
+  return render(request, 'months/index.html', { 'months': months })
