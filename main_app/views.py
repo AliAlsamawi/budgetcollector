@@ -29,3 +29,7 @@ def months_index(request):
 
 def home(request):
   return render(request, 'home.html')
+
+def months_detail(request, month_id):
+  month = Month.objects.get(id=month_id)
+  return render(request, 'months/detail.html', { 'months': months })
