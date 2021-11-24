@@ -32,8 +32,9 @@
     </div>
     <nav>
       <ul>
-        <li><a href="/months">All months</a></li>
-        <li><a href="/about">About</a></li>
+        <li><a href="{% url 'months_index'%}">All months</a></li>
+        <li><a href="{% url 'months_create'%}">Add A month</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
       </ul>
     </nav>
   </header>

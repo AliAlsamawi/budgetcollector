@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views.generic.edit import CreateView, DeleteView
 from .models import Month
 
 
@@ -22,7 +23,15 @@ def months_index(request):
   months = Month.objects.all()
   return render(request, 'months/index.html', { 'months': months })
 
-
 def months_detail(request, month_id):
   month = Month.objects.get(id=month_id)
   return render(request, 'months/detail.html', { 'month': month })
+
+class MonthCreate(CreateView):
+  model = Month
+  fields = '__all__'
+  success_url = '/months/'
+
+class MonthDelete(DeleteView):
+  model = Month
+  success_url = '/months/'

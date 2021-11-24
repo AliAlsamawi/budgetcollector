@@ -23,6 +23,7 @@
       <h2> In the year {{ month.year }} {{ month.breed }}</h2>
       <h2>The goal for this month is to save $ {{ month.budget }} .</h2>
   </div>
+      <a href="{% url 'months_delete' month.id %}" class="btn danger">Delete</a>
 </section>
 
 {% endblock %}
