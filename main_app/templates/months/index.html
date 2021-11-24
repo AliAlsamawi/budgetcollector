@@ -18,7 +18,7 @@
 <section class="card-container">
   {% for month in months %}
   <div class="card">
-    <a href="/months/{{ month.id }}">
+    <a href="{% url 'months_detail' month.id %}">
       <div class="card-content">
         <div class="card-img-container">
           <img 
