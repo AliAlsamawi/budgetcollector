@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link 
+  rel="stylesheet" 
+  type="text/css" 
+  href="{% static 'css/month-detail.css' %}"
+/>
+{% endblock %}
+
+{% block content %}
+
+<section class="month-container">
+  <div class="month-img">
+    <img 
+      src="{% static 'images/sk8r-boi-month.svg' %}" 
+      alt="A skater boy month"
+    >
+  </div>
+  <div class="month-details">
+    <h1>{{ month.name }}</h1>
+      <h2> {{ month.year }} {{ month.breed }}</h2>
+      <h2> {{ month.budget }} .</h2>
+  </div>
+</section>
+
+{% endblock %}
