@@ -7,6 +7,16 @@
   rel="stylesheet" 
 />
 <link rel="stylesheet" href="{% static 'css/mcdp.css' %}">
+<script 
+  src="https://cdn.jsdelivr.net/npm/mc-datepicker/dist/mc-calendar.min.js"
+>
+</script>
+<link 
+  rel="stylesheet" 
+  type="text/css" 
+  href="{% static 'css/cat-detail.css' %}"
+/>
+<link rel="stylesheet" href="{% static 'css/mcdp.css' %}">
 <script defer src="{% static 'js/month-detail.js' %}"></script>
 </script>
 <link 
@@ -35,7 +45,7 @@
 <div class="feedings-toy-container">
   <section class="feedings">
     <div class="subsection-title">
-      <h2>Feedings</h2>
+      <h2>Expenses</h2>
       <img 
         src="{% static 'images/cat-cone.svg' %}" 
         alt="An ice cream cone cat"
@@ -51,27 +61,39 @@
     </div>
     <table>
       <thead>
-        {% comment %} <tr><th>Date</th>
+        <tr><th>Date</th>
         <th>price</th></tr>
         <th>reason</th></tr>
         <th>worthit</th></tr>
         <th>recurring</th></tr>
-        <th>paid</th></tr> {% endcomment %}
+        <th>paid</th></tr>
       </thead>
       <tbody>
-        {% for expense in month.expense_set.all %}
           <tr>
-            <td>date{{expense.date}}</td>
-            <td> price {{expense.get_price_display}}</td>
-            <td>reason{{expense.get_reason_display}}</td>
-            <td>worth it ?{{expense.get_worthit_display}}</td>
-            <td>recurring{{expense.get_recurring_display}}</td>
-            <td> paid {{expense.get_paid_display}}</td>
+          {% for expense in month.expense_set.all %}
+            <td>{{expense.date}}</td>
+            <td>{{expense.get_price_display}}</td>
+            <td>{{expense.get_reason_display}}</td>
+            <td>{{expense.get_worthit_display}}</td>
+            <td>{{expense.get_recurring_display}}</td>
+            <td>{{expense.get_paid_display}}</td>
           </tr>
         {% endfor %}
+        <h3>Add a expense</h3>
+    <form
+      action="{% url 'add_expense' month.id %}" 
+      method="post" 
+      class="subsection-content"
+    >
+      {% csrf_token %}
+      {{ expense_form.as_p }}
+      <button type="submit" class="btn submit">Add Expenses</button>
+    </form>
+      <h3>Past expense</h3>
       </tbody>
     </table>
   </section>
 </div>
+
 
 {% endblock %}
