@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic.edit import CreateView, DeleteView
 from .models import Month
+from .forms import ExpenseForm
 
 
 
@@ -23,9 +24,15 @@ def months_index(request):
   months = Month.objects.all()
   return render(request, 'months/index.html', { 'months': months })
 
+
 def months_detail(request, month_id):
   month = Month.objects.get(id=month_id)
-  return render(request, 'months/detail.html', { 'month': month })
+  # instantiate FeedingForm to be rendered in the template
+  expense_form = ExpenseForm()
+  return render(request, 'months/detail.html', {
+    # include the cat and feeding_form in the context
+    'month': month, 'expense_form': expense_form
+  })
 
 class MonthCreate(CreateView):
   model = Month

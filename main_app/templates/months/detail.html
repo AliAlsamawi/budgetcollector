@@ -25,5 +25,52 @@
   </div>
       <a href="{% url 'months_delete' month.id %}" class="btn danger">Delete</a>
 </section>
+<div class="feedings-toy-container">
+  <section class="feedings">
+    <div class="subsection-title">
+      <h2>Expenses</h2>
+      <img 
+        src="{% static 'images/dollar-sign.png' %}" 
+        alt="An ice cream cone cat"
+      />
+      <img 
+        src="{% static 'images/us-dollar.png' %}"
+        alt="A cat as onigiri"
+      />
+      <img 
+        src="{% static 'images/banknotes.png' %}" 
+        alt="A kabob of kittens"
+      />
+    </div>
+    <table>
+      <thead>
+        <tr><th>Date</th><th>Expenses</th></tr>
+      </thead>
+      <tbody>
+        {% for expense in month.expense_set.all %}
+          <tr>
+            <td>{{expense.date}}</td>
+            <td>{{expense.get_worthit_display}}</td>
+            <td>{{expense.get_worthit_display}}</td>
+            <td>{{expense.get_paid_display}}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </section>
+</div>
+<h3>Add a new expense</h3>
+    <form
+      method="post" 
+      class="subsection-content"
+    >
+      {% csrf_token %}
+      {{ expense_form.as_p }}
+      <button type="submit" class="btn submit">Add Expense</button>
+    </form>
+    <h3>Past expense</h3>
+    {% comment %} New code above {% endcomment %}
+    <table>
+
 
 {% endblock %}
