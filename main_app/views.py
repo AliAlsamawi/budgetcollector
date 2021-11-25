@@ -33,6 +33,7 @@ def months_detail(request, month_id):
     # include the cat and feeding_form in the context
     'month': month, 'expense_form': expense_form
   })
+  
 def add_expense(request, month_id):
   form = ExpenseForm(request.POST)
   # validate the form
