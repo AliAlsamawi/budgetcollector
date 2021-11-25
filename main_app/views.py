@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic.edit import CreateView, DeleteView
 from .models import Month
 from .forms import ExpenseForm
@@ -33,6 +33,14 @@ def months_detail(request, month_id):
     # include the cat and feeding_form in the context
     'month': month, 'expense_form': expense_form
   })
+def add_expense(request, month_id):
+  form = ExpenseForm(request.POST)
+  # validate the form
+  if form.is_valid():
+    new_expense = form.save(commit=False)
+    new_expense.month_id = month_id
+    new_expense.save()
+  return redirect('months_detail', month_id=month_id)
 
 class MonthCreate(CreateView):
   model = Month
