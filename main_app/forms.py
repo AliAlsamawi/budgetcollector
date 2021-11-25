@@ -1,7 +1,7 @@
 from django.forms import ModelForm
-from .models import Expenses
+from .models import Expense
 
 class ExpenseForm(ModelForm):
   class Meta:
-    model = Expenses
+    model = Expense
     fields = ['date', 'price', 'reason', 'worthit', 'recurring', 'paid']

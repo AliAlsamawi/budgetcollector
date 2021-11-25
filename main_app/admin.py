@@ -1,8 +1,8 @@
 from django.contrib import admin
 # import your models here
-from .models import Month, Expenses
+from .models import Month, Expense
 
 # Register your models here
 admin.site.register(Month)
 
-admin.site.register(Expenses)
+admin.site.register(Expense)

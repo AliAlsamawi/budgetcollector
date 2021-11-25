@@ -27,21 +27,11 @@ def months_index(request):
 
 def months_detail(request, month_id):
   month = Month.objects.get(id=month_id)
-  # instantiate FeedingForm to be rendered in the template
   expense_form = ExpenseForm()
   return render(request, 'months/detail.html', {
-    # include the cat and feeding_form in the context
-    'month': month, 'expense_form': expense_form
+    'month': month, 'Expense_form': expense_form
   })
-  
-def add_expense(request, month_id):
-  form = ExpenseForm(request.POST)
-  # validate the form
-  if form.is_valid():
-    new_expense = form.save(commit=False)
-    new_expense.month_id = month_id
-    new_expense.save()
-  return redirect('months_detail', month_id=month_id)
+
 
 class MonthCreate(CreateView):
   model = Month
@@ -51,3 +41,11 @@ class MonthCreate(CreateView):
 class MonthDelete(DeleteView):
   model = Month
   success_url = '/months/'
+
+  def add_expense(request, month_id):
+    form = ExpenseForm(request.POST)
+    if form.is_valid():
+      new_expense = form.save(commit=False)
+      new_expense.month_id = month_id
+      new_expense.save()
+    return redirect("months_detail", month_id=month_id)

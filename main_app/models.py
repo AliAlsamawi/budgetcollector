@@ -25,8 +25,8 @@ class Month(models.Model):
   def get_absolute_url(self):
     return reverse('months_detail', kwargs={'month_id': self.id})
 
-class Expenses(models.Model):
-  date = models.DateField('Expenses date')
+class Expense(models.Model):
+  date = models.DateField()
   price = models.IntegerField()
   reason = models.CharField(max_length=100)
   worthit = models.CharField(
