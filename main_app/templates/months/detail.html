@@ -68,6 +68,7 @@
 </div>
 <h3>Add a new expense</h3>
     <form
+      action="{% url 'add_expense' month.id %}" 
       method="post" 
       class="subsection-content"
     >
@@ -76,7 +77,7 @@
       <button type="submit" class="btn submit">Add Expense</button>
     </form>
     <h3>Past expense</h3>
-    {% comment %} New code above {% endcomment %}
+    
     <table>
 
 
