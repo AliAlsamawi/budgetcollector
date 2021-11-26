@@ -39,6 +39,9 @@ class MonthCreate(CreateView):
   model = Month
   fields = '__all__'
   success_url = '/months/'
+  def form_valid(self, form):
+    form.instance.user = self.request.user  
+    return super().form_valid(form)
 
 class MonthDelete(DeleteView):
   model = Month
