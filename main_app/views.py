@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.views.generic.edit import CreateView, DeleteView
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.decorators import login_required
 from .models import Month
 from .forms import ExpenseForm
 from django.contrib.auth.views import LoginView
@@ -24,6 +25,7 @@ class Months:  # Note that parens are optional if not inheriting from another cl
 
 
 def months_index(request):
+  months = Month.objects.filter(user=request.user)
   months = Month.objects.all()
   return render(request, 'months/index.html', { 'months': months })
 
