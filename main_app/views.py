@@ -2,12 +2,13 @@ from django.shortcuts import render, redirect
 from django.views.generic.edit import CreateView, DeleteView
 from .models import Month
 from .forms import ExpenseForm
+from django.contrib.auth.views import LoginView
 
 
 
 # Define the home view
-def home(request):
-  return render(request, 'home.html')
+class Home(LoginView):
+  template_name = 'home.html'
 
 def about(request):
   return render(request, 'about.html')
