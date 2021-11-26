@@ -32,9 +32,16 @@
     </div>
     <nav>
       <ul>
+      {% if user.is_authenticated %}
         <li><a href="{% url 'months_index'%}">All months</a></li>
         <li><a href="{% url 'months_create'%}">Add A month</a></li>
         <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'logout' %}">Log out</a></li>
+        {% else %}
+        <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'home' %}">Login</a></li>
+          {% endif %}
+
       </ul>
     </nav>
   </header>
