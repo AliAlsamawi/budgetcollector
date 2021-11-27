@@ -24,7 +24,7 @@
   <header>
     {% comment %} <div class="header-logo-container"> {% endcomment %}
     </div>
-    <nav>
+    <nav class="navMenu">
       <ul>
       {% if user.is_authenticated %}
         <li><a href="{% url 'months_index'%}">All months</a></li>
@@ -35,6 +35,7 @@
         <li><a href="{% url 'about' %}">About</a></li>
             <li><a href="{% url 'home' %}">Login</a></li>
             <li><a href="{% url 'signup' %}">Sign Up</a></li>
+            <div class = "dot"></div>
 
           {% endif %}
 

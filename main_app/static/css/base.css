@@ -47,7 +47,6 @@ body {
 }
 
 
-
 header {
   width: 100%;
   background: var(--nav-bg-ff);
@@ -77,11 +76,11 @@ nav a {
   color: var(--text-color);
   font-weight: 600;
   font-size: 16px;
-}
+} */
 
-nav a:hover {
+ nav a:hover {
   color: var(--link-hover-color)
-}
+} 
 
 nav ul {
   display: flex;
@@ -157,6 +156,7 @@ nav li {
 .page-header img:first-of-type {
   margin-left: 20px;
 }
+
 
 @media only screen and (min-width: 768px) {
   header {
