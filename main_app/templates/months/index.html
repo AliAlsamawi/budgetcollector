@@ -2,17 +2,17 @@
 {% load static %}
 
 {% block head %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/cat-index.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'css/month-index.css' %}"/>
 {% endblock %}
 
 {% block content %}
 
 <section class="page-header">
   <h1>Month List</h1>
-  <img src="{% static 'images/banknotes.png' %}" alt="A cool cat" />
-  <img src="{% static 'images/bitcoin.png' %}" alt="A happy cat" />
-  <img src="{% static 'images/red-bag.png' %}" alt="A cat in a teacup" />
-  <img src="{% static 'images/us-dollar.png' %}" alt="A cat in a box" />
+  <img src="{% static 'images/banknotes.png' %}" alt="Banknotes" />
+  <img src="{% static 'images/bitcoin.png' %}" alt="Bitcoin" />
+  <img src="{% static 'images/red-bag.png' %}" alt="red bag" />
+  <img src="{% static 'images/us-dollar.png' %}" alt="dollar"/>
 </section>
 
 <section class="card-container">
@@ -26,11 +26,13 @@
             alt="A skater boy cat"
           >
         </div>
+        <div class = "title1">
         <h2 class="card-title">{{ month.name }}</h2>
         {% if month.name > 0 %}
         {% else %}
           <p>The budget for  {{ month.name }} is {{ month.budget }}</p>
           <p>The a year {{ month.year }} .</p>
+          </div>
         {% endif %}
       </a>
       </div>

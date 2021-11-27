@@ -27,9 +27,9 @@ body {
     sans-serif;
   min-height: 100vh;
   --nav-bg: rgba(104, 197, 248, .7);
-  --nav-bg-ff: rgba(104, 197, 248, .9);
-  --borders: rgb(36, 116, 248) solid 2px;
-  --text-color: rgb(17, 20, 17);
+  --nav-bg-ff: rgba(102, 208, 86, 0.9);
+  --borders: rgb(38, 249, 5, 0.9) solid 2px;
+  --text-color: rgb(240, 240, 7);
   --link-hover-color: rgb(16, 56, 158);
   --button-bg: rgb(245, 245, 245);
   --button-bg-hover: rgb(226, 226, 226);
@@ -45,6 +45,8 @@ body {
   --font-reg: 1.6rem;
   --card-border-radius: 6px;
 }
+
+
 
 header {
   width: 100%;
