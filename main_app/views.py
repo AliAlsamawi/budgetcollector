@@ -3,6 +3,7 @@ from django.views.generic.edit import CreateView, DeleteView
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Month
 from .forms import ExpenseForm
 from django.contrib.auth.views import LoginView
@@ -22,8 +23,7 @@ class Months:  # Note that parens are optional if not inheriting from another cl
     self.budget = budget
     self.year = year
 
-
-
+@login_required
 def months_index(request):
   months = Month.objects.filter(user=request.user)
   months = Month.objects.all()
@@ -39,7 +39,7 @@ def months_detail(request, month_id):
   })
 
 
-class MonthCreate(CreateView):
+class MonthCreate(LoginRequiredMixin,CreateView):
   model = Month
   fields = '__all__'
   success_url = '/months/'
@@ -47,9 +47,11 @@ class MonthCreate(CreateView):
     form.instance.user = self.request.user  
     return super().form_valid(form)
 
-class MonthDelete(DeleteView):
+class MonthDelete(LoginRequiredMixin,DeleteView):
   model = Month
   success_url = '/months/'
+
+@login_required  
 def add_expense(request, month_id):
   form = ExpenseForm(request.POST)
   if form.is_valid():
