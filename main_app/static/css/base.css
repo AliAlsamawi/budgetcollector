@@ -29,7 +29,7 @@ body {
   --nav-bg: rgba(104, 197, 248, .7);
   --nav-bg-ff: rgba(102, 208, 86, 0.9);
   --borders: rgb(38, 249, 5, 0.9) solid 2px;
-  --text-color: rgb(240, 240, 7);
+  --text-color: rgb(4, 52, 211);
   --link-hover-color: rgb(16, 56, 158);
   --button-bg: rgb(245, 245, 245);
   --button-bg-hover: rgb(226, 226, 226);
@@ -50,7 +50,9 @@ body {
 header {
   width: 100%;
   background: var(--nav-bg-ff);
-  border-bottom: var(--borders);
+  border-bottom: black;
+  background-image: url('http://wonderfulengineering.com/wp-content/uploads/2016/01/cool-wallpaper-40-610x381.jpg');
+
 }
 
 nav {
@@ -76,9 +78,10 @@ nav a {
   color: var(--text-color);
   font-weight: 600;
   font-size: 16px;
-} */
+  opacity: 10px;
+} 
 
- nav a:hover {
+nav a:hover {
   color: var(--link-hover-color)
 } 
 
@@ -156,6 +159,12 @@ nav li {
 .page-header img:first-of-type {
   margin-left: 20px;
 }
+.navMenu{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
 
 
 @media only screen and (min-width: 768px) {
@@ -165,6 +174,7 @@ nav li {
     flex-direction: row;
     top: 0;
     align-items: center;
+    
   }
 
   main {
@@ -181,6 +191,7 @@ nav li {
   /* visual fix to help align logo */
   .header-logo-container {
     padding-top: 3px;
+    background-color: green;
   }
 
   nav {

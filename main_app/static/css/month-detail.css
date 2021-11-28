@@ -29,6 +29,7 @@
   flex-direction: column;
   padding-bottom: 20px;
   align-items: center;
+  margin: auto;
 }
 
 .subsection-title {
@@ -105,6 +106,7 @@
   flex-direction: column;
   justify-content: center;
   margin-bottom: 20px;
+  margin: auto;
 }
 
 .subsection-title img {
@@ -141,10 +143,9 @@
 }
 
 .feedings table {
-  width: calc(100% - 16px);
+  /* width: calc(100% - 16px); */
   text-align: left;
   border-collapse: collapse;
-  margin: 0 8px;
 }
 
 .feedings td {
@@ -154,8 +155,8 @@
 
 .feedings th {
   font-size: var(--font-l);
-  padding: 5px 5px 0;
-  border-bottom: rgb(36, 116, 248) solid 2px;
+  /* padding: 5px 5px 0; */
+  /* border-bottom: rgb(36, 116, 248) solid 2px; */
 }
 
 .feedings tr:nth-child(even) {
@@ -186,7 +187,46 @@
 #file-name {
   margin-bottom: 10px;
 }
-
+/* Table Styles */
+tables thead, table tbody, table th {
+  display: block;
+} 
+table thead {
+  float: left;
+}
+table tbody {
+  width: auto;
+  position: relative;
+  overflow: auto;
+}
+table td, table th {
+  height: 60px;
+  box-sizing: border-box;
+  font-size: 13px;
+  text-overflow: ellipsis;
+  overflow-y: auto;
+  vertical-align: middle;
+  pad: 1.5rem 0.6rem 0.6rem 0.6rem;
+}
+table th {
+  text-align: left;
+  border-bottom: 1px solid #f7f7f8;
+}
+table tbody tr {
+  display: table-cell;
+}
+table tbody td {
+  display: block;
+  background-color: #fff;
+}
+table thead th:nth-child(odd) {
+  color: #fff;
+  background-color: #324960;
+}
+table tr td:nth-child(even) {
+  background-color: #f8f8f8;
+  border-right: 1px solid #e4e4e4;
+}
 @media only screen and (min-width: 768px) {
   .cat-container {
     padding: 35px 30px;
@@ -208,7 +248,43 @@
   }
 
   .feedings-toy-container > section {
-    width: 45%;
+    /* width: 45%; */
+  }
+  /* Tables Styles */
+  .table-container {
+    margin: .7rem 5rem 5rem;
+    box-shadow: 0px 35px 45px #00000029;
+  }
+  .table-container table {
+    border: none;
+    border-radius: .3rem;
+    font-size: 10px;
+    font-weight: normal;
+    border-collapse: collapse;
+    width: 100%;
+   }
+   .table-container th, .table-container th {
+     text-align: center;
+     padding-top: 5px;
+     box-sizing: border-box;
+     font-size: 1.4rem;
+     font-weight: 300;
+   }
+   table td {
+     font-size: 12px;
+     border-radius: #f8f8f8;
+   }
+   table thead th {
+     background-color: #4fc4a1;
+     color: white;
+   }
+   table thead th:nth-child(odd) {
+    color: #fff;
+    background-color: #324960;
+  }
+  table tr td:nth-child(even) {
+    background-color: #f8f8f8;
+    border-right: 1px solid #e4e4e4;
   }
 }
 
