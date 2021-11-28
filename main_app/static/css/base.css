@@ -26,10 +26,10 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   min-height: 100vh;
-  --nav-bg: rgba(104, 197, 248, .7);
-  --nav-bg-ff: rgba(102, 208, 86, 0.9);
-  --borders: rgb(38, 249, 5, 0.9) solid 2px;
-  --text-color: rgb(4, 52, 211);
+  --nav-bg: rgba(0, 0, 0, 0.7);
+  --nav-bg-ff: rgba(4, 4, 4, 0.9);
+  --borders: rgba(0, 0, 0, 0.9) solid 2px;
+  --text-color: rgb(255, 255, 255);
   --link-hover-color: rgb(16, 56, 158);
   --button-bg: rgb(245, 245, 245);
   --button-bg-hover: rgb(226, 226, 226);
@@ -44,6 +44,7 @@ body {
   --font-l: 1.8rem;
   --font-reg: 1.6rem;
   --card-border-radius: 6px;
+  
 }
 
 
@@ -51,7 +52,7 @@ header {
   width: 100%;
   background: var(--nav-bg-ff);
   border-bottom: black;
-  background-image: url('http://wonderfulengineering.com/wp-content/uploads/2016/01/cool-wallpaper-40-610x381.jpg');
+  /* background-image: url('http://wonderfulengineering.com/wp-content/uploads/2016/01/cool-wallpaper-40-610x381.jpg'); */
 
 }
 
@@ -176,6 +177,13 @@ nav li {
     align-items: center;
     
   }
+  .card-title{
+    color: black;
+    text-decoration: none;
+  }
+p{
+  color: black;
+}
 
   main {
     max-width: 1300px;
@@ -219,6 +227,9 @@ nav li {
   
   .page-header img:first-of-type {
     margin-left: 25px;
+  }
+  header{
+    color: black;
   }
 
   @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
