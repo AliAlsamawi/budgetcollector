@@ -45,6 +45,9 @@ body {
   --font-reg: 1.6rem;
   --card-border-radius: 6px;
 }
+body{
+  background-color: blanchedalmond;
+}
 
 
 header {
