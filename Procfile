@@ -1,1 +1,1 @@
-web: budgetcollector gunicorn .wsgi
+web: gunicorn budgetcollector.wsgi
