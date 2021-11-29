@@ -44,10 +44,14 @@ body {
   --font-l: 1.8rem;
   --font-reg: 1.6rem;
   --card-border-radius: 6px;
+  background-image: url('https://media.istockphoto.com/vectors/money-cash-seamless-background-dollar-currency-money-signs-backdrop-vector-id1127759190?k=20&m=1127759190&s=170667a&w=0&h=7PysJF385H3G5XUqRZLlva4Wte5JyXn3KZ6gOJOX0RA=');
+  background-size: cover;
+  /* background-repeat: repeat; */
+  background-position: center;
 }
-body{
-  background-color: blanchedalmond;
-}
+/* body{
+  background-img: #335936;
+} */
 
 
 header {
@@ -171,6 +175,7 @@ nav li {
 .title1{
 text-decoration: none;
 }
+
 
 @media only screen and (min-width: 768px) {
   header {
