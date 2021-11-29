@@ -41,7 +41,7 @@ def months_detail(request, month_id):
 
 class MonthCreate(LoginRequiredMixin,CreateView):
   model = Month
-  fields = '__all__'
+  fields = 'name', 'year', 'budget'
   success_url = '/months/'
   def form_valid(self, form):
     form.instance.user = self.request.user  

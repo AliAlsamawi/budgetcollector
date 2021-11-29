@@ -30,16 +30,14 @@ class Month(models.Model):
 class Expense(models.Model):
   date = models.DateField()
   price = models.IntegerField()
-  reason = models.CharField(max_length=100)
+  reason = models.TextField(max_length=300)
   worthit = models.CharField(
     max_length=1,
     choices=WORTHIT,
-    # default=WORTHIT[0][0]
     )
   recurring = models.CharField(
     max_length=1,
     choices=RECURRING,
-    # default=RECURRING[0][0]
     )
   paid = models.CharField(
     max_length=1,
