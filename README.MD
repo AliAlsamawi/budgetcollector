@@ -10,13 +10,13 @@
 
 
 
-Deployed link:
+## Deployed link:
 
-https://budgetcollector.herokuapp.com/months/
+[click here!](https://budgetcollector.herokuapp.com/months/)
 
-Trello link:
+## Trello link:
 
-https://trello.com/b/77RmRL3l/budget-app
+[click here!](https://trello.com/b/77RmRL3l/budget-app)
 
 ## Technologies Used: ##
 * Django
