@@ -225,6 +225,11 @@ p{
     justify-content: center;
   }
 
+P{
+  font-size: 40px;
+  align-items: center;
+  }
+
   nav ul {
     flex-wrap: nowrap;
   }
