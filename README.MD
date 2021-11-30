@@ -7,10 +7,12 @@
 <img src= "https://user-images.githubusercontent.com/90650175/138370163-2fd4e76c-1377-4395-ba36-07ba3614894c.png">
 
 <img src= "https://user-images.githubusercontent.com/90650175/138370074-aa28be26-4400-4b60-9c17-552bd9b096a7.png">
-# Deployed link: #
+Deployed link:
+
 https://budgetcollector.herokuapp.com/months/
 
 Trello link:
+
 https://trello.com/b/77RmRL3l/budget-app
 
 ## Technologies Used: ##
