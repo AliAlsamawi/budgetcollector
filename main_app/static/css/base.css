@@ -79,6 +79,9 @@ main {
 h2 {
   font-size: var(--font-xl);
 }
+h1{
+  color: rgb(0, 0, 0);
+}
 
 nav a {
   text-decoration: none;
@@ -175,6 +178,9 @@ nav li {
 .title1{
 text-decoration: none;
 }
+input{
+backdrop-filter: blur(9px);
+}
 
 
 @media only screen and (min-width: 768px) {
@@ -197,6 +203,8 @@ p{
   main {
     max-width: 1300px;
     min-height: calc(100vh - 53px);
+    backdrop-filter: blur(10px);
+    text-decoration: none;
   }
 
   nav,

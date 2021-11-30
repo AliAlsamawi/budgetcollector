@@ -9,6 +9,8 @@ table {
   padding: 0 40px;
   width: 100%;
   border-spacing: 0 20px;
+  backdrop-filter: blur(9px);
+  border-radius: 7%;
 }
 
 th {
@@ -37,4 +39,11 @@ td > textarea {
 .btn {
   align-self: flex-end;
   margin-right: 40px;
+}
+/* .page-header{
+} */
+
+main{
+  backdrop-filter: blur(10px);
+  text-decoration: none;
 }
