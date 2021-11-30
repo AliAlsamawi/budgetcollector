@@ -8,18 +8,21 @@
 
 <img src= "https://user-images.githubusercontent.com/90650175/138370074-aa28be26-4400-4b60-9c17-552bd9b096a7.png">
 ## Deployed link: ## 
-https://testyourmight.netlify.app/
+https://budgetcollector.herokuapp.com/months/
 
-wireframe link:
-https://whimsical.com/project-idea-AHAxFeEweBFNGJKstBMPVo
+Trello link:
+https://trello.com/b/77RmRL3l/budget-app
 
 ## Technologies Used: ##
+* Django
+* Python 
+* JavaScript
+* PostgreSQL
 * Html
-* JavaScript 
 * CSS
+* Font Awesome
 
 ## Next Steps: ##
-I will like to add a harder levels, with less time and more cards.
-
+I Will like to add a delete functionality for my table in my expense model. This will allow users to delete expenses that they no longer need to remember. 
 
 

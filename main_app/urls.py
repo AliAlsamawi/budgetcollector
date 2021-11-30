@@ -10,5 +10,4 @@ urlpatterns = [
   path('months/<int:pk>/delete/', views.MonthDelete.as_view(), name='months_delete'),
   path('months/<int:month_id>/add_expense/', views.add_expense, name='add_expense'),
   path('accounts/signup/', views.signup, name='signup'),
-
 ]
